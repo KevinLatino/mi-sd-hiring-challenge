@@ -1,4 +1,4 @@
-import { GEO_BASE_URL, FORECAST_BASE_URL } from "../config/constants";
+import { GEOLOCATION_API_URL, FORECAST_API_URL } from "../config/constants";
 
 async function fetchJson(url, msg) {
   let response;
@@ -17,13 +17,13 @@ async function fetchJson(url, msg) {
 
 export async function getGeolocation(zipCode) {
   const params = new URLSearchParams({ zip_code: String(zipCode).trim() });
-  return fetchJson(`${GEO_BASE_URL}?${params}`, `geolocation (${zipCode})`);
+  return fetchJson(`${GEOLOCATION_API_URL}?${params}`, `geolocation (${zipCode})`);
 }
 
 export async function getForecast(latitude, longitude, date) {
   const params = new URLSearchParams({ latitude, longitude, date });
   return fetchJson(
-    `${FORECAST_BASE_URL}?${params}`,
+    `${FORECAST_API_URL}?${params}`,
     `forecast (${latitude}, ${longitude})`
   );
 }

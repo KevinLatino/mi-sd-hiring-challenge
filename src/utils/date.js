@@ -1,4 +1,4 @@
-import { DAY_NAMES } from "../config/constants";
+import { WEEKDAY_NAMES } from "../config/constants";
 
 export function convertDate(time) {
   return time * 1000;
@@ -23,5 +23,5 @@ export function buildDayLabel(timestamp) {
     return "Today: ";
   }
 
-  return `${DAY_NAMES[forecastDate.getDay()]}: `;
+  return `${WEEKDAY_NAMES[forecastDate.getDay()]}: `;
 }

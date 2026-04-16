@@ -1,15 +1,15 @@
-import { WEATHER_ICONS, WEATHER_SUMMARY_BY_ICON } from "../config/constants";
+import { ICON_ASSETS, CONDITION_BY_ICON } from "../config/constants";
 
 export function getDailyForecast(forecastData, maxDays = 3) {
   return forecastData?.daily?.data?.slice(0, maxDays) ?? [];
 }
 
 export function buildWeatherLabel(icon, summary) {
-  return WEATHER_SUMMARY_BY_ICON[icon] ?? summary ?? "Clear";
+  return CONDITION_BY_ICON[icon] ?? summary ?? "Clear";
 }
 
 export function buildWeatherIcon(iconKey) {
-  return WEATHER_ICONS[iconKey] ?? WEATHER_ICONS.sunny;
+  return ICON_ASSETS[iconKey] ?? ICON_ASSETS.sunny;
 }
 
 export function buildTempRange(highTemp, lowTemp) {
