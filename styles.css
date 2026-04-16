@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#weather-dashboard {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 20px 1rem;
+}
+
+.dashboard-header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 100%;
+}
+
+#location-heading {
+  color: #8a8a8a;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0 0.5rem;
+  text-align: center;
+  max-width: 100%;
+  min-width: 0;
+}
+
+#heading-rule {
+  background-color: #e8cf4d;
+  flex-shrink: 0;
+  height: 4px;
+  width: 40px;
+  display: inline-block;
+}
+
+#forecast-body {
+  min-height: 200px;
+  width: 100%;
+  max-width: 100%;
+  align-self: stretch;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.status-banner,
+.error-banner {
+  font-size: 1.25rem;
+  padding: 20px;
+}
+
+.status-banner { color: #8a8a8a; }
+
+.error-banner { color: rgb(232, 87, 87); }
+
+.tiles-row {
+  flex-direction: column;
+  gap: 1.25rem;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  align-self: stretch;
+}
+
+.forecast-tile {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.tile-day-label {
+  background-color: #469cc6;
+  color: #fff;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 14px;
+  padding: 9px 1rem;
+}
+
+.tile-body {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.875rem;
+  padding: 0 0.5625rem 0.625rem;
+}
+
+.tile-weather-icon {
+  height: 52px;
+  width: 52px;
+  flex-shrink: 0;
+}
+
+.tile-details {
+  flex-direction: column;
+  padding-top: 2px;
+  display: flex;
+}
+
+.tile-condition,
+.tile-temp-range {
+  color: #2b3947;
+  font-size: 1.0625rem;
+}
+
+.tile-condition {
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.tile-temp-range { font-weight: 400; }
+
+@media (min-width: 641px) {
+  #location-heading {
+    font-size: 1.625rem;
+    line-height: 1.2;
+  }
+
+  .tiles-row {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.125rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .forecast-tile {
+    width: auto;
+    flex: 0 1 230px;
+    max-width: 250px;
+  }
+
+  .tile-day-label {
+    min-width: 0;
+    font-size: 1.375rem;
+  }
+
+  .tile-condition,
+  .tile-temp-range {
+    font-size: 1.1875rem;
+  }
+}

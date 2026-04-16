@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="">
+  <head>
+    <title>Movable Ink</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <title>Movable Ink</title>
-  <meta charset="UTF-8" />
-</head>
-
-<body>
-  <div id="app"></div>
-</body>
-<script src="src/app.js"></script>
-
+  <body>
+    <div id="weather-dashboard">
+      <div class="dashboard-header">
+        <h1 id="location-heading">WEATHER FORECAST FOR</h1>
+        <span id="heading-rule"></span>
+      </div>
+      <div id="forecast-body"></div>
+    </div>
+    <script type="module" src="src/app.js"></script>
+  </body>
 </html>
